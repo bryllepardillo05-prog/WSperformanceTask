@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="registration-container">
+    <h2>Student Registration Form</h2>
+    
+    
+    <div id="successMessage" class="success-banner hidden">
+       Registration Successful! 
+    </div>
+
+    <form id="registrationForm" novalidate>
+      
+      
+      <div class="form-group">
+        <label for="studentId">Student ID</label>
+        <input type="text" id="studentId" placeholder="e.g., 2026-00123" data-min-length="8" data-field-name="Student ID">
+        <small class="error-text"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="John Doe">
+        <small class="error-text"></small>
+      </div>
+
+      
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="john.doe@example.com">
+                                <small class="error-text"></small>
+                            </div>
+
+      
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="09123456789 (11 digits)" data-pattern="^09\d{9}$">
+        <small class="error-text"></small>
+      </div>
+
+                        <!-- Date of Birth -->
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob">
+                            <small class="error-text"></small>
+                        </div>
+
+      <!-- Gender -->
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+        <small class="error-text" id="genderError"></small>
+      </div>
+
+                        <!-- Program -->
+                        <div class="form-group">
+                            <label for="program">Academic Program</label>
+                            <select id="program">
+                            <option value="">Select Program</option>
+                            <option value="BSIT">BS Information Technology</option>
+                            <option value="BSCS">BS Computer Science</option>
+                            <option value="BSIS">BS Information Systems</option>
+                            <option value="BSCE">BS Computer Engineering</option>
+                            </select>
+                            <small class="error-text"></small>
+                        </div>
+
+      <!-- Year Level -->
+      <div class="form-group">
+        <label for="yearLevel">Year Level</label>
+        <select id="yearLevel">
+          <option value="">Select Year Level</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select>
+        <small class="error-text"></small>
+      </div>
+
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="At least 6 characters">
+                        <button type="button" id="togglePasswordBtn" class="toggle-btn">Show</button>
+                        </div>
+                        <small class="error-text"></small>
+                    </div>
+
+      
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Re-enter password">
+        <small class="error-text"></small>
+      </div>
+
+      
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" rows="3" placeholder="Enter your full address"></textarea>
+                            <small class="error-text"></small>
+                        </div>
+
+      
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" id="agreement">
+          I agree to the Terms and Conditions
+        </label>
+        <small class="error-text" id="agreementError"></small>
+      </div>
+
+      
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-primary">Submit Registration</button>
+                            <button type="button" id="resetBtn" class="btn btn-secondary">Reset Form</button>
+                        </div>
+
+                        </form>
+                    </div>
+
+                    <script src="script.js"></script>
+                    </body>
+                    </html>
